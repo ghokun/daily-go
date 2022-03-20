@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Test_202203123(t *testing.T) {
+func Test_20220313(t *testing.T) {
 	type args struct {
 		numbers []int
 	}
@@ -52,8 +52,8 @@ func Test_202203123(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := _202203123(tt.args.numbers); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("_202203123() = %v, want %v", got, tt.want)
+			if got := _20220313(tt.args.numbers); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("_20220313() = %v, want %v", got, tt.want)
 			}
 		})
 	}

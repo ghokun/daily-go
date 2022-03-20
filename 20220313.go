@@ -9,7 +9,7 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be
 
 Follow-up: what if you can't use division?
 */
-func _202203123(numbers []int) []int {
+func _20220313(numbers []int) []int {
 	length := len(numbers)
 	var forward = make([]int, length)
 	var backward = make([]int, length)
