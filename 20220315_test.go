@@ -42,7 +42,7 @@ func Test_20220315(t *testing.T) {
 		{
 			name: "Test 5",
 			args: args{
-				arr: []int{1,-1,-5,-3,3,4,2,8},
+				arr: []int{1, -1, -5, -3, 3, 4, 2, 8},
 			},
 			want: 5,
 		},
