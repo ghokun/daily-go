@@ -1,45 +1,30 @@
 package dailygo
 
-type _20220318_node struct {
-	Value string
-	Left  *_20220318_node
-	Right *_20220318_node
-}
+import "strconv"
 
 /*
-A unival tree (which stands for "universal value") is a tree where all nodes under it have the same value.
+Given the mapping a = 1, b = 2, ... z = 26, and an encoded message, count the number of ways it can be decoded.
 
-Given the root to a binary tree, count the number of unival subtrees.
+For example, the message '111' would give 3, since it could be decoded as 'aaa', 'ka', and 'ak'.
 
-For example, the following tree has 5 unival subtrees:
-
-   0
-  / \
- 1   0
-    / \
-   1   0
-  / \
- 1   1
+You can assume that the messages are decodable. For example, '001' is not allowed.
 */
-func _20220318(binaryTree *_20220318_node) int {
-	if binaryTree == nil {
+func _20220318(message string) int {
+	if len(message) == 0 {
 		return 0
 	}
-	left := binaryTree.Left
-	right := binaryTree.Right
-
-	if left != nil && right != nil {
-		count := 0
-		if left.Value == right.Value {
-			count = 1
+	if len(message) == 1 {
+		return 1
+	}
+	count1 := _20220318(message[1:])
+	count2 := 0
+	first2chars := message[:2]
+	firstTwo, err := strconv.Atoi(first2chars)
+	if err == nil && firstTwo >= 10 && firstTwo <= 26 {
+		if len(message) == 2 {
+			return 2
 		}
-		return count + _20220318(left) + _20220318(right)
+		count2 = _20220318(message[2:])
 	}
-	if left != nil {
-		return _20220318(left)
-	}
-	if right != nil {
-		return _20220318(right)
-	}
-	return 1 // both nil
+	return count1 + count2
 }
