@@ -2,7 +2,7 @@ package dailygo
 
 import "testing"
 
-func Test_20220314(t *testing.T) {
+func Test_20220315(t *testing.T) {
 	type args struct {
 		arr []int
 	}
@@ -49,7 +49,7 @@ func Test_20220314(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := _20220314(tt.args.arr); got != tt.want {
+			if got := _20220315(tt.args.arr); got != tt.want {
 				t.Errorf("_20220314() = %v, want %v", got, tt.want)
 			}
 		})
