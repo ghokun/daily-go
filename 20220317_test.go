@@ -32,6 +32,13 @@ func Test_20220317(t *testing.T) {
 			},
 			want: 8,
 		},
+		{
+			name: "Test 4",
+			args: args{
+				message: "99999",
+			},
+			want: 1,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
