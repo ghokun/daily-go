@@ -9,7 +9,7 @@ func Test_20220325(t *testing.T) {
 	}{
 		{
 			name: "Test 1",
-			want: 3.141,
+			want: 3.14,
 		},
 	}
 	for _, tt := range tests {

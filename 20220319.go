@@ -13,13 +13,13 @@ Given the root to a binary tree, count the number of unival subtrees.
 
 For example, the following tree has 5 unival subtrees:
 
-   0
-  / \
- 1   0
-    / \
-   1   0
-  / \
- 1   1
+	  0
+	 / \
+	1   0
+	   / \
+	  1   0
+	 / \
+	1   1
 */
 func _20220319(binaryTree *_20220319_node) int {
 	if binaryTree == nil {
